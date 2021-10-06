@@ -1,0 +1,175 @@
+/**
+Theme Name: Stuartmacbride Child Theme
+Author: 999
+Author URI: http://wpastra.com/about/
+Description: Stuart Macbride Child Theme.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: stuartmacbride-child-theme
+Template: astra
+*/
+
+/* ---------- Theme Colours ---------- */
+:root {
+    --sb-yellow: #ffe800;
+    --sb-black: #020202;
+    --sb-grey: #707071;
+    --sb-white: #fff;
+}
+
+/* ---------- Custom Block Styles ---------- */
+/* --- Buttons --- */
+    /* Arrow */
+    .wp-block-button.is-style-button-arrow .wp-block-button__link {
+        background: none;
+        color: black;
+        padding: 0;
+        border: none;
+    }
+
+    .wp-block-button.is-style-button-arrow .wp-block-button__link:after {
+        content: "\f344";
+        font: normal 20px/1 'dashicons';
+        display: inline-block;
+        color: inherit;
+        height: 30px;
+        margin-right: 13px;
+        position: relative;
+        top: 2px;
+        vertical-align: middle;
+        width: 30px;
+    }
+
+    .wp-block-button.is-style-button-arrow .wp-block-button__link:focus, .wp-block-button.is-style-button-arrow .wp-block-button__link:hover {
+        background: none;
+        color: inherit;
+    }
+
+    /* Outline White */
+    .wp-block-button.is-style-outline-white .wp-block-button__link {
+        border: solid 1px;
+        border-color: #fff;
+        background: transparent;
+        color: #fff;
+    }
+
+    .wp-block-button.is-style-outline-white .wp-block-button__link:hover {
+        border-color: var(--ast-global-color-0, #ffe800);
+        background: transparent;
+        color: #fff;
+    }
+
+    /* Fill Alt */
+    .wp-block-button.is-style-fill-alt .wp-block-button__link {
+        border: solid 2px;
+        border-color: var(--sb-yellow);
+        background: var(--sb-yellow);
+        color: var(--sb-black);
+    }
+    .wp-block-button.is-style-fill-alt .wp-block-button__link:hover {
+        border-color: var(--sb-black);
+        background: var(--sb-white);
+        color: var(--sb-black);
+
+    }
+
+    /* Fill */
+    /* .wp-block-button.is-style-fill .wp-block-button__link {
+        border: solid 2px;
+        border-color: var(--sb-yellow);
+        background: var(--sb-yellow);
+        color: var(--sb-black);
+    }
+
+    .wp-block-button.is-style-fill .wp-block-button__link:hover {
+        border-color: var(--sb-black);
+    } */
+
+/* Paragraph */
+.is-style-intro {
+    max-width: 50ch;
+    line-height: 1.25;
+}
+
+/* Media & Text */
+.is-style-image-shadow img {
+    box-shadow: 1rem 1rem var(--ast-global-color-0, #ffe800);
+}
+
+/* Separator */
+.wp-block-separator.is-style-short {
+    max-width: calc(30px + 5%);
+}
+
+/* Group */
+.wp-block-group.is-style-remove-vertical-spacing {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+
+
+/* ---------- Edit Existing Components ---------- */
+/* Scroll Top */
+.ast-scroll-top-icon {
+    border: 1px solid;
+    border-color: var(--ast-global-color-3, #fff);
+}
+
+.ast-scroll-top-icon:hover {
+    border-color: var(--ast-global-color-0, #ffe800);
+}
+
+/* ---------- Helpers ---------- */
+.border-top-bottom {
+    border-top: solid 10px;
+    border-bottom: solid 10px;
+    border-color: var(--ast-global-color-0, #ffe800);
+
+}
+
+/* ---------- Client form code ---------- */
+.amf-el {
+    /* color: #fff; */
+}
+
+.sb-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--sb-white);
+}
+
+.sb-form input {
+    min-width: 350px;
+}
+
+.sb-from-submit {
+    padding: 1rem 4rem !important;
+    display: inline-block;
+    transition: all 0.2s 0s ease-in;
+    font-weight: bold;
+    border: solid 2px;
+    border-color: var(--sb-black) !important;
+    background: var(--sb-yellow) !important;;
+    color: var(--sb-black) !important;;
+}
+
+.sb-from-submit:hover {
+    border-color: var(--sb-white) !important;;
+    background: var(--sb-white) !important;;
+    color: var(--sb-black) !important;;
+}
+
+
+/*  ---------- Temporary ---------- */
+.page-id-1628 .site-above-footer-wrap[data-section="section-above-footer-builder"] {
+    background: #fff;
+}
+
+.page-id-1628 #block-14 h1 {
+    color: black !important;
+    background: #fff;
+}
