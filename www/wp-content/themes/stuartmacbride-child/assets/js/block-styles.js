@@ -50,5 +50,19 @@ wp.domReady( () => {
 		}
 	);
 
+    wp.blocks.registerBlockStyle( 
+		'core/button', {
+			name: 'preset-fill-ellow',
+			label: 'Preset Fill Yellow',
+		}
+	);
+
+    wp.blocks.registerBlockStyle( 
+		'core/button', {
+			name: 'preset-outline-black',
+			label: 'Preset Outline Black',
+		}
+	);
+
 
 } );

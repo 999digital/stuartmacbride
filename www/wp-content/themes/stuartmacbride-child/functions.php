@@ -53,3 +53,41 @@ add_action( 'enqueue_block_editor_assets', 'rich_block_editor_scripts' );
  * https://ultimategutenberg.com/docs/remove-uag-templates-button/
  */
 add_filter( 'ast_block_templates_disable', '__return_true' );
+
+
+
+
+// Add this as plugin !!!!!!!!!!!!!!!
+add_action('acf/init', 'my_acf_blocks_init');
+function my_acf_blocks_init() {
+
+    // Check function exists.
+    if( function_exists('acf_register_block_type') ) {
+
+        // Register a testimonial block.
+        acf_register_block_type(array(
+            'name'              => 'sticky-nav',
+            'title'             => __('Sticky Nav'),
+            'description'       => __('Sticki Navigation for blocks.'),
+            'icon'              => 'admin-links',
+            'render_template'   => 'components/blocks/sticky nav/sticky-nav.php',
+            'category'          => 'formatting',
+            'supports'          => array( 
+                'multiple' => false,
+                'align' => false,    
+            ),
+            // 'example'           => array(
+            //     'attributes' => array(
+            //         'mode' => 'preview',
+            //         'data' => array(
+            //             'testimonial'   => "Blocks are...",
+            //             'author'        => "Jane Smith",
+            //             'role'          => "Person",
+            //             'is_preview'    => true
+            //         )
+            //     )
+            // )
+        ));
+    }
+}
+

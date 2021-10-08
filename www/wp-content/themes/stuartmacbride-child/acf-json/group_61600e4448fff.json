@@ -1,11 +1,11 @@
 {
-    "key": "group_6153189c290a7",
-    "title": "test json",
+    "key": "group_61600e4448fff",
+    "title": "Promo Book",
     "fields": [
         {
-            "key": "field_615318a5a0be6",
-            "label": "test",
-            "name": "test",
+            "key": "field_61600e582b9c2",
+            "label": "",
+            "name": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -39,5 +39,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632835756
+    "modified": 1633685333
 }

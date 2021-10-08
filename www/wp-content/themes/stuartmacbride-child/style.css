@@ -16,6 +16,8 @@ Template: astra
     --sb-black: #020202;
     --sb-grey: #707071;
     --sb-white: #fff;
+
+    --sb-button-border-size: 1px;;
 }
 
 /* ---------- Custom Block Styles ---------- */
@@ -48,7 +50,7 @@ Template: astra
 
     /* Outline White */
     .wp-block-button.is-style-outline-white .wp-block-button__link {
-        border: solid 1px;
+        border: solid 2px;
         border-color: #fff;
         background: transparent;
         color: #fff;
@@ -74,17 +76,24 @@ Template: astra
 
     }
 
-    /* Fill */
-    /* .wp-block-button.is-style-fill .wp-block-button__link {
-        border: solid 2px;
+    /* Fill Alt on block with background colour */
+    .has-background .wp-block-button.is-style-fill-alt .wp-block-button__link:hover {
+        border-color: var(--sb-white);
+    }
+
+    /* Preset Outline Black */
+    .wp-block-button.is-style-preset-outline-black .wp-block-button__link {
+        border: solid var(--sb-button-border-size);
+        border-color: var(--sb-black);
+        background: transparent;
+        color: var(--sb-black);
+    }
+
+    .wp-block-button.is-style-preset-outline-black .wp-block-button__link:hover {
         border-color: var(--sb-yellow);
         background: var(--sb-yellow);
         color: var(--sb-black);
     }
-
-    .wp-block-button.is-style-fill .wp-block-button__link:hover {
-        border-color: var(--sb-black);
-    } */
 
 /* Paragraph */
 .is-style-intro {
@@ -108,6 +117,59 @@ Template: astra
     margin-bottom: 0;
 }
 
+/* Sticky Navigation */
+
+html, body, .site-content {
+    scroll-behavior: smooth;
+    scroll-padding-top: 200px;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 130px;
+    z-index: 89; 
+    /* Header is 99 z-index */
+
+    background: var(--sb-yellow);
+    /* color: var(--sb-white); */
+}
+
+.sticky-nav__list {
+    
+}
+
+.sticky-nav__item {
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-right: solid 1px;
+    border-color: var(--sb-black);
+    color: var(--sb-black);   
+}
+
+.sticky-nav__item:after {
+    content: "";
+    position: absolute;
+    bottom: 0.5rem;
+    left: 1rem;
+    width: 0%;
+    height: 2px;
+    background: var(--sb-black);
+    transition: all 0.25s 0s ease-in;
+}
+
+.sticky-nav__item:last-child {
+    border-right: none;
+}
+
+.sticky-nav__item:hover:after, .sticky-nav__item:active:after, .sticky-nav__item:focus:after {
+    width: calc(100% - 2rem);
+}
+
+.sticky-nav__item:hover, .sticky-nav__item:active, .sticky-nav__item:focus {
+    color: var(--sb-black);
+}
+
+
 
 
 
@@ -122,17 +184,38 @@ Template: astra
     border-color: var(--ast-global-color-0, #ffe800);
 }
 
+/* Blog date */
+    /* Date number */
+.ast-article-post .ast-date-meta .posted-on, .ast-article-post .ast-date-meta .posted-on * {
+    background: var(--sb-yellow);
+    color: var(--sb-black);
+}
+    /* Month and Year  */
+.ast-article-post .ast-date-meta .posted-on .date-month, .ast-article-post .ast-date-meta .posted-on .date-year {
+    color: var(--sb-black);
+}
+
+
+
 /* ---------- Helpers ---------- */
 .border-top-bottom {
     border-top: solid 10px;
     border-bottom: solid 10px;
     border-color: var(--ast-global-color-0, #ffe800);
-
 }
+
+.post-grid-equal-size img {
+    max-height: 500px;
+    object-fit: contain;
+    object-position: left;
+}
+
+
+
 
 /* ---------- Client form code ---------- */
 .amf-el {
-    /* color: #fff; */
+    width: 360px;
 }
 
 .sb-form {
